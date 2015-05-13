@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/card"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- You can popolate your elements with CardHeader#setupInnerViewElements() method -->
+    <TextView
+        android:textColor="#333"
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/text_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/text_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="#00BB11"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text_purchased"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/text_description"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/text_price"
+        android:layout_marginRight="10dp"
+        android:text="@string/text_owned"
+        android:textColor="#ff002cbb"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@id/text_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_title"
+        android:layout_marginLeft="20dp"
+        android:layout_toLeftOf="@id/text_purchased"
+        android:textColor="#BBB"
+        android:textSize="14sp" />
+
+    <ViewStub
+        android:id="@+id/card_supplemental_actions_vs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_description"
+        android:inflatedId="@+id/card_supplemental_actions" />
+</RelativeLayout>
+

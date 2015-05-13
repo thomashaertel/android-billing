@@ -1,0 +1,5 @@
+include ':android-billing'
+include ':android-billing-sample'
+
+project(':android-billing').projectDir = file('library')
+project(':android-billing-sample').projectDir = file('samples/android-billing')
